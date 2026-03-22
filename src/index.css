@@ -15,3 +15,19 @@ body {
   overscroll-behavior-y: contain;
   -webkit-tap-highlight-color: transparent;
 }
+
+html.standalone-mode,
+body.standalone-mode,
+html.standalone-mode #root {
+  min-height: 100lvh;
+  height: 100lvh;
+}
+
+@media (display-mode: standalone) {
+  html,
+  body,
+  #root {
+    min-height: 100lvh;
+    height: 100lvh;
+  }
+}

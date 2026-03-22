@@ -26,9 +26,11 @@ textarea {
 
 .appRoot {
   min-height: 100vh;
-  min-height: 100lvh;
+  min-height: 100dvh;
+  min-height: 100svh;
   height: 100vh;
-  height: 100lvh;
+  height: 100dvh;
+  height: 100svh;
   background:
     radial-gradient(circle at 12% 10%, #f8c87f 0%, rgba(248, 200, 127, 0) 35%),
     radial-gradient(circle at 88% 82%, #b9e5cf 0%, rgba(185, 229, 207, 0) 40%),
@@ -41,6 +43,20 @@ textarea {
   padding-bottom: max(10px, calc(env(safe-area-inset-bottom) + 8px));
   color: var(--ink);
   font-family: 'Avenir Next', 'Trebuchet MS', sans-serif;
+}
+
+.standalone-mode .appRoot {
+  min-height: 100lvh;
+  height: 100lvh;
+  padding-bottom: max(10px, calc(env(safe-area-inset-bottom) + 8px));
+}
+
+@media (display-mode: standalone) {
+  .appRoot {
+    min-height: 100lvh;
+    height: 100lvh;
+    padding-bottom: max(10px, calc(env(safe-area-inset-bottom) + 8px));
+  }
 }
 
 .mobileShell {
@@ -102,6 +118,15 @@ textarea {
 
 .pageStatic {
   justify-content: space-between;
+}
+
+.pageHomeNoScroll {
+  overflow-y: hidden;
+}
+
+.pageHomeScrollable {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .pageWithFooter {
