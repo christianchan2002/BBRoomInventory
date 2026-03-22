@@ -7,7 +7,10 @@ body,
 }
 
 body {
-  background: #f2efe7;
+  background:
+    radial-gradient(circle at 12% 10%, #f8c87f 0%, rgba(248, 200, 127, 0) 35%),
+    radial-gradient(circle at 88% 82%, #b9e5cf 0%, rgba(185, 229, 207, 0) 40%),
+    #f2efe7;
   overflow: hidden;
   overscroll-behavior-y: contain;
   -webkit-tap-highlight-color: transparent;
