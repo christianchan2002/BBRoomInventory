@@ -26,13 +26,17 @@ textarea {
 
 .appRoot {
   min-height: 100dvh;
+  height: 100dvh;
   background:
     radial-gradient(circle at 12% 10%, #f8c87f 0%, rgba(248, 200, 127, 0) 35%),
     radial-gradient(circle at 88% 82%, #b9e5cf 0%, rgba(185, 229, 207, 0) 40%),
     var(--bg);
   display: flex;
   justify-content: center;
-  padding: 12px;
+  padding-top: max(0px, env(safe-area-inset-top));
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: max(20px, calc(env(safe-area-inset-bottom) + 12px));
   color: var(--ink);
   font-family: 'Avenir Next', 'Trebuchet MS', sans-serif;
 }
@@ -40,7 +44,7 @@ textarea {
 .mobileShell {
   width: 100%;
   max-width: 430px;
-  height: calc(100dvh - 24px);
+  height: 100%;
   background: var(--shell);
   border: 1px solid #ccbfa7;
   border-radius: 24px;
